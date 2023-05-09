@@ -1,0 +1,310 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    /* background: linear-gradient(180deg, #000000, #24613e); */
+    /* Change this to change top menu bad background */
+    background: white transparent;
+}
+
+/*
+body {
+    background: black;
+    background-size: 400% 400%;
+}
+*/ 
+
+.logo{
+    /* Title in topleft */
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.navlist{
+    /* Entire menulist */
+
+    /* Moves elements horizontally */
+    display: flex;
+}
+
+.navlist a{
+    /* Individual items in menulist */
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+
+.navlist a:hover{
+    /* Adds underline on hover for menulist items */
+    border-bottom: 2px solid white;
+}
+
+#menu-icon{
+    /* Adjusts the properties of the hamburger menu */
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    /* background: linear-gradient(180deg, #000000, #24613e); */
+    background: linear-gradient(180deg, #000000, #BF5700);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section{
+    /* Moves main text over from left edge */
+    padding: 0 19%;
+}
+
+.main-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.main-text h1{
+    font-family: 'Yellowtail', cursive;
+    font-size: 90px;
+    line-height: 1;
+    color:white;
+    margin: 0 0 45px;
+}
+
+.main-text h4{
+    font-family: 'Yellowtail', cursive;
+    font-size: 18px;
+    font-weight: 600;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+.main-text p{
+    color:white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.main-image img{
+    /* Properties for the main image in center */
+    width: 700px;
+    height: auto;
+    border: 5px solid #ffffff;
+
+}
+
+.main-text a{
+    /* Properties for link buttons under text */
+    display: inline-block;
+    color: white;
+    background: grey;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px; 
+    font-weight: 500;
+    /* Rounds border */
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+
+.main-text a:hover{
+    /* Animates the text buttons under main text */
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.main-text a.ctaa{
+    /* Properties for the button with play icon */
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.main-text a.ctaa i{
+    /* Adjusts text in button with play icon */
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 34px;
+    color: white;
+    transition: all .50s ease;
+
+}
+
+.icons i:hover{
+    color: grey;
+    transform: translateY(-5px);
+}
+
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+}
+
+.scroll-down i{
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: rgb(0, 0, 0, 0.4);
+    border-radius: 30px;
+    transition: all .50s ease;
+}
+
+.scroll-down i:hover{
+    transform: translateY(-5px);
+}
+
+/* @media entried change the page as the window gets smaller */
+
+@media (max-width: 1535px){
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+    .icons{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .scroll-down{
+        right: 3%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1460px){
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1340px){
+    .main-image img{
+        width: 100%;
+        height: auto;
+    }
+    .main-text h1{
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+    .main-text h5{
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1195px){
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .main-text{
+        padding-top: 115px;
+    }
+    .main-image{
+        text-align: center;
+    }
+    .main-image img{
+        width: 560px;
+        height: auto;
+    }
+    .main{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .icons{
+        display: none;
+    }
+    .scroll-down{
+        display: none;
+    }
+}
+
+/* Adds the pop up menu bar top right */
+@media (max-width: 990px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        background: rgb(0, 0, 0, 0.4);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+    }
+    .navlist.open{
+        right: 0;
+    }
+}
+
+@media (max-width: 680px){
+    .menu-image img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*
+@keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}*/
