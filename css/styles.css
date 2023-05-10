@@ -19,7 +19,7 @@ header{
     padding: 33px 9%;
     /* background: linear-gradient(180deg, #000000, #24613e); */
     /* Change this to change top menu bad background */
-    background: white transparent;
+    background: rgb(0, 0, 0, 0.4);
 }
 
 /*
@@ -71,6 +71,7 @@ body {
     height: 100%;
     width: 100%;
     min-height: 100vh;
+    overflow: visible;
     /* background: linear-gradient(180deg, #000000, #24613e); */
     background: linear-gradient(180deg, #000000, #2447a0);
     position: relative;
@@ -160,7 +161,7 @@ section{
 }
 
 .icons{
-    position: absolute;
+    position: fixed;
     top: 50%;
     padding: 0 9%;
     transform: translateY(-50%);
@@ -301,6 +302,14 @@ section{
         height: auto;
     }
 }
+
+.scroll-container {
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+
+
 
 /*
 @keyframes AnimationName {
