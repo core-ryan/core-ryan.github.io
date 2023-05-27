@@ -1,2 +1,2 @@
 # core-ryan.github.io
-Homepage Website
+Used as personalized web browser homepage with all relavent links I need in home/new tab page
